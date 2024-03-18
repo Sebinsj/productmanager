@@ -40,6 +40,5 @@ export class ProductService{
 
     editProduct(id,value){
         return this.http.put('https://productmanagerbyssj-default-rtdb.firebaseio.com/products/'+id+'.json',value)
-        
     }
 }

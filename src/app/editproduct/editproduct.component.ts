@@ -11,8 +11,9 @@ import { Product } from '../Model/product.model';
 })
 export class EditproductComponent implements OnInit {
   productFormEdit:FormGroup;
-  selectedProduct:any;
+
   selectedProductId:string='';
+  selectedProduct:any;
   ProductId:string='';
 
 
@@ -33,7 +34,7 @@ export class EditproductComponent implements OnInit {
       this.productService.getProductbyId(this.ProductId).subscribe((res)=>{
         this.selectedProduct=res
         console.log(this.selectedProduct);
-        this.selectedProductId=this.ProductId
+        this.selectedProductId=this.ProductId,
         
         
         this.productFormEdit.patchValue({
@@ -50,7 +51,8 @@ export class EditproductComponent implements OnInit {
   }
 
   onEditProduct(){
-    this.productService.editProduct(this.selectedProductId,this.selectedProduct).subscribe(()=>{
+    
+    this.productService.editProduct(this.ProductId,this.productFormEdit.value).subscribe(()=>{
       this.router.navigate(['/'])
     })
 
