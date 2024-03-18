@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { map } from "rxjs";
+import { Product } from "../Model/product.model";
 
 
 
@@ -25,5 +26,20 @@ export class ProductService{
               return products
             }))
 
+    }
+    deleteProduct(id:string){
+        return this.http.delete('https://productmanagerbyssj-default-rtdb.firebaseio.com/products/'+id+'.json')
+
+    }
+    getProductbyId(id:string){
+       return this.http.get<Product>('https://productmanagerbyssj-default-rtdb.firebaseio.com/products/'+id+'.json')
+
+
+    }
+
+
+    editProduct(id,value){
+        return this.http.put('https://productmanagerbyssj-default-rtdb.firebaseio.com/products/'+id+'.json',value)
+        
     }
 }

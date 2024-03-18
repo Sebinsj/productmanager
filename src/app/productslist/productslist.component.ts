@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../Services/product.service';
 import { Product } from '../Model/product.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-productslist',
@@ -11,12 +12,13 @@ export class ProductslistComponent implements OnInit{
   isFetching:boolean=false;
   allProducts:Product[]=[];
 
-  constructor(private productService:ProductService){}
+  constructor(private productService:ProductService,private route:Router){}
 
   ngOnInit() {
     this.fetchProducts();
       
   }
+
   private fetchProducts(){
     this.isFetching=true
     this.productService.getProducts().subscribe((products)=>{
@@ -25,7 +27,19 @@ export class ProductslistComponent implements OnInit{
       
       this.isFetching=false
     })
+  }
+  onDeleteProduct(id:string){
+    this.productService.deleteProduct(id).subscribe((res)=>{
+
+    })
+    
+  }
+
+  onEditProduct(id:string){
+    this.route.navigate(['editproduct',id])
+    
 
   }
+
 
 }

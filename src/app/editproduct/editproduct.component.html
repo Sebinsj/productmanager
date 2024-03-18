@@ -1,1 +1,24 @@
-<p>editproduct works!</p>
+
+<h1 class="heading" style="padding: 40px;">Add New Product</h1>
+<div class="container">
+    <div class="row">
+        <form class="form" action="" [formGroup]="productFormEdit" (ngSubmit)="onEditProduct()"  >
+            <div class="form-group">
+                <label for="taskTitle" style="margin: 10px auto;">Enter Product Name:</label>
+                <input type="text" id="taskTitle" class="form-control" formControlName="name">
+            </div>
+            <div class="form-group">
+                <label for="taskTitle" style="margin: 10px auto;">Enter Product Price:</label>
+                <input type="text" id="taskTitle" class="form-control" formControlName="price">
+            </div>
+               
+            <div class="form-group">
+                <label for="taskDescription"style="margin: 10px auto;">Enter Product description:</label>
+                <textarea id="taskDescription" class="form-control" rows="3" cols="50" formControlName="desc"></textarea>
+            </div> 
+            <button class="btn btn-addnew" style="margin: 10px auto; " >
+                <i class="fa-solid fa-plus"></i>
+                Update Product</button>    
+        </form>
+    </div>
+</div>
