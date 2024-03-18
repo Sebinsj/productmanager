@@ -8,9 +8,9 @@
             <div *ngIf="isFetching">
                 <h5>Loading........</h5>
             </div>
-            <h1 class="card-title">Name: {{ selectedProduct.name }}</h1>
-            <h5 class="card-text">Description: {{ selectedProduct.desc }}</h5>
-            <h5 class="card-text">Price: ${{ selectedProduct.price }}</h5>
+            <h1 class="card-title">Name: {{ selectedProduct?.name }}</h1>
+            <h5 class="card-text">Description: {{ selectedProduct?.desc }}</h5>
+            <h5 class="card-text">Price: ${{ selectedProduct?.price }}</h5>
             <div class="mt-auto">
               <button class="btn btn-edit" (click)="viewEdit()">
                 <i class="fa-solid fa-pen-to-square"></i>
