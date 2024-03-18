@@ -1,0 +1,17 @@
+.btn {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+.btn-addnew {
+    background-color: #3bad0ecb;
+  }
+  
+  .btn-addnew:hover {
+    background-color: #0ca207;
+  }

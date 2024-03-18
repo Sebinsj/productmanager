@@ -1,0 +1,43 @@
+
+
+.form-control{
+    background-color:rgba(37, 28, 208, 0.175)
+}
+
+.btn {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+.btn-delete {
+    background-color: #f20e0ed1;
+  }
+  
+  .btn-delete:hover {
+    background-color: #d10808;
+  }
+  .btn-edit {
+    background-color: #1022eacc;
+  }
+  
+  .btn-edit:hover {
+    background-color: #090cc5;
+  }
+  .btn-view {
+    background-color: #000000a5;
+  }
+  
+  .btn-view:hover {
+    background-color: #000000;
+  }
+  .btn-addnew {
+    background-color: #241aded3;
+  }
+  
+  .btn-addnew:hover {
+    background-color: #0e029b;
+  }

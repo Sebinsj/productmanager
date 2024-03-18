@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-12 col-md-2 sidebar">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <h3 class="nav-link-main" routerLink="productslist">Product Manager</h3>
+        </li>
+        <div style="padding-top: 40px;">
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="productslist">All Products</a>
+          </li>
+         </div>
+          <div style="padding-top: 15px;">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="createproduct">Add New Product</a>
+          </li>
+
+
+        </div>
+        
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="EditTask/">Edit Task</a>
+        </li> -->
+      </ul>
+    </div>
+
+    <!-- Main content area -->
+    <main role="main" class="col-12 col-md-10 main-content" style="background-color:#CADCFC">
+      
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
+
+

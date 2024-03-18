@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+      <h1 class="heading" style="padding: 30px;">All Products</h1>
+      <button class="btn btn-addnew" routerLink="/CreateTask">Add a New Product</button>
+
+      
+
+      <div  *ngFor="let product of allProducts">
+        <div class="form-group" style="padding-top: 20px;">
+            <div class="form-control">
+              <h5>Name: {{product.name}}  </h5>
+              <p>Description: {{product.desc}}  </p>
+              <p>  Price: ${{product.price}}  </p>
+              <button class="btn btn-delete" >
+                <i class="fas fa-trash-alt"></i>Delete 
+              </button>
+              <button class="btn btn-edit" ><i class="fa-regular fa-pen-to-square"></i>
+                Edit</button>
+              <button class="btn btn-view" ><i class="fa-regular fa-eye"></i> View</button>
+              
+            </div>
+          </div>
+          
+      </div>
+
+
+    </div>
+  </div>
+  
