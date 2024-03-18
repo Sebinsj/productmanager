@@ -10,7 +10,7 @@ const routes: Routes = [
   {path:'productslist',component:ProductslistComponent},
 
   {path:'createproduct',component:CreateproductComponent},
-  {path:'viewproduct',component:ViewproductComponent},
+  {path:'viewproduct/:id',component:ViewproductComponent},
   {path:'editproduct/:id',component:EditproductComponent},
 
 

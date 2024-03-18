@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ProductService } from '../Services/product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-createproduct',
@@ -9,7 +10,7 @@ import { ProductService } from '../Services/product.service';
 })
 export class CreateproductComponent {
 
-  constructor(private productService:ProductService){
+  constructor(private productService:ProductService,private router:Router){
 
   }
 
@@ -26,9 +27,8 @@ export class CreateproductComponent {
 
   onAddProduct(product:{price:string,name:string,desc:string})
   {
-    console.log(product);
-    this.productService.createproduct(product).subscribe((res)=>{
-      console.log(res);
+    this.productService.createproduct(product).subscribe((res)=>{ 
+    this.router.navigate(['/']);
       
     });
     

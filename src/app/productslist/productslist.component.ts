@@ -30,6 +30,7 @@ export class ProductslistComponent implements OnInit{
   }
   onDeleteProduct(id:string){
     this.productService.deleteProduct(id).subscribe((res)=>{
+      this.fetchProducts()
 
     })
     
@@ -38,7 +39,10 @@ export class ProductslistComponent implements OnInit{
   onEditProduct(id:string){
     this.route.navigate(['editproduct',id])
     
+  }
 
+  onViewProduct(id:string){
+    this.route.navigate(['viewproduct',id])
   }
 
 

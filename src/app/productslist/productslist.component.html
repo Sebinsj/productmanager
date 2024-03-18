@@ -1,9 +1,9 @@
 <div class="container">
     <div class="row">
       <h1 class="heading" style="padding: 30px;">All Products</h1>
-      <button class="btn btn-addnew" routerLink="/CreateTask">Add a New Product</button>
+      <button class="btn btn-addnew" routerLink="/createproduct">Add a New Product</button>
       <div *ngIf="allProducts.length<1&&!isFetching">
-        <h5>No Tasks Available</h5>
+        <h5>No Products Found</h5>
         </div>
   
         <div *ngIf="isFetching">
@@ -23,7 +23,7 @@
               </button>
               <button class="btn btn-edit" (click)="onEditProduct(prod.id)">
                 Edit</button>
-              <button class="btn btn-view" > View</button>
+              <button class="btn btn-view" (click)="onViewProduct(prod.id)"> View</button>
               
             </div>
           </div>
