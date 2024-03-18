@@ -12,12 +12,15 @@
             <h5 class="card-text">Description: {{ selectedProduct.desc }}</h5>
             <h5 class="card-text">Price: ${{ selectedProduct.price }}</h5>
             <div class="mt-auto">
-              <button class="btn btn-primary" (click)="viewEdit(selectedProduct.id)">
+              <button class="btn btn-edit" (click)="viewEdit()">
                 <i class="fa-solid fa-pen-to-square"></i>
                 Edit</button>
-              <button class="btn btn-secondary" routerLink="/productslist"> 
+              <button class="btn btn-back" routerLink="/productslist"> 
                 <i class="fa-solid fa-arrow-left"></i>
                 Back To All Tasks</button>
+                <button class="btn btn-delete" (click)="onViewDelete(selectedProductId)">
+                    <i class="fas fa-trash-alt"></i>Delete 
+                  </button>
             </div>
           </div>
         </div>

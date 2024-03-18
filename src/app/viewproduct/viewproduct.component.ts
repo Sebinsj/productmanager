@@ -25,9 +25,15 @@ export class ViewproductComponent implements OnInit{
     }
 
   }
-  viewEdit(id){
+  viewEdit(){
     this.router.navigate(['editproduct',this.selectedProductId])
   }
 
+  onViewDelete(id){
+    this.productService.deleteProduct(id).subscribe((res)=>{
+      this.router.navigate(['productslist'])
 
+    })
+
+  }
 }
