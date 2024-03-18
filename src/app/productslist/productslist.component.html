@@ -1,7 +1,9 @@
 <div class="container">
     <div class="row">
       <h1 class="heading" style="padding: 30px;">All Products</h1>
-      <button class="btn btn-addnew" routerLink="/createproduct">Add a New Product</button>
+      <button class="btn btn-addnew" routerLink="/createproduct">
+        <i class="fa-solid fa-plus"></i>
+        Add a New Product</button>
       <div *ngIf="allProducts.length<1&&!isFetching">
         <h5>No Products Found</h5>
         </div>
@@ -15,15 +17,17 @@
       <div  *ngFor="let prod of allProducts;index as i">
         <div class="form-group" style="padding-top: 20px;">
             <div class="form-control">
-              <h5>{{i+1}}. Name: {{prod.name}}  </h5>
+              <h5>{{i+1}}.  {{prod.name}}  </h5>
               <p>Description: {{prod.desc}}  </p>
               <p>  Price: ${{prod.price}}  </p>
               <button class="btn btn-delete" (click)="onDeleteProduct(prod.id)">
                 <i class="fas fa-trash-alt"></i>Delete 
               </button>
               <button class="btn btn-edit" (click)="onEditProduct(prod.id)">
+                <i class="fa-solid fa-pen-to-square"></i>
                 Edit</button>
-              <button class="btn btn-view" (click)="onViewProduct(prod.id)"> View</button>
+              <button class="btn btn-view" (click)="onViewProduct(prod.id)"> 
+                <i class="fa-solid fa-eye"></i>View</button>
               
             </div>
           </div>

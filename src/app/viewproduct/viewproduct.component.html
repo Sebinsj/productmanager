@@ -10,10 +10,14 @@
             </div>
             <h1 class="card-title">Name: {{ selectedProduct.name }}</h1>
             <h5 class="card-text">Description: {{ selectedProduct.desc }}</h5>
-            <h5 class="card-text">Price: {{ selectedProduct.price }}</h5>
+            <h5 class="card-text">Price: ${{ selectedProduct.price }}</h5>
             <div class="mt-auto">
-              <button class="btn btn-primary" (click)="viewEdit(selectedProduct.id)">Edit</button>
-              <button class="btn btn-secondary" routerLink="/productslist">Back To All Tasks</button>
+              <button class="btn btn-primary" (click)="viewEdit(selectedProduct.id)">
+                <i class="fa-solid fa-pen-to-square"></i>
+                Edit</button>
+              <button class="btn btn-secondary" routerLink="/productslist"> 
+                <i class="fa-solid fa-arrow-left"></i>
+                Back To All Tasks</button>
             </div>
           </div>
         </div>
